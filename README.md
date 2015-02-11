@@ -44,12 +44,6 @@ Install the bower components:
 python manage.py bower install
 ```
 
-Install yuglify with npm.
-
-```
-sudo npm -g install yuglify
-```
-
 ## Running the tests
 
 Before running the tests collect the static files as the tests run in production mode.
