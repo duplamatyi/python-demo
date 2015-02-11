@@ -1,0 +1,20 @@
+{
+    "database": {
+        "name": "",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+    },
+    "supervisor": {
+        "user": ""
+    },
+    "virtualenv": {
+        "path": ""
+    },
+    "application": {
+        "path": "",
+        "settings_module": "",
+        "secret_key": ""
+    }
+}

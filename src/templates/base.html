@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<link rel="stylesheet" href="style.css" />-->
+    <title>{% block title %}Django Demo{% endblock %}</title>
+    {% load staticfiles %}
+    {% if debug %}
+        <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    {% else %}
+        <link href="{% static 'bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet">
+    {% endif %}
+    {% block extra_style %}{% endblock %}
+    {% if debug %}
+        <script type="text/javascript" src="{% static 'jquery/dist/jquery.js' %}"></script>
+    {% else %}
+        <script type="text/javascript" src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+    {% endif %}
+</head>
+
+<body>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    {% load js %}
+    {% django_js jquery=false %}
+    {% if debug %}
+        <script type="text/javascript" src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'underscore/underscore.js' %}"></script>
+    {% else %}
+        <script type="text/javascript" src="{% static 'bootstrap/dist/js/bootstrap.js' %}"></script>
+        <script type="text/javascript" src="{% static 'underscore/underscore-min.js' %}"></script>
+    {% endif %}
+    <script type="text/javascript" src="{% static 'pythonDemo/js/main.js' %}"></script>
+    {% block extra-script %}{% endblock %}
+</body>
+</html>

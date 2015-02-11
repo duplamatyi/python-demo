@@ -2,53 +2,49 @@
 __pycache__/
 *.py[cod]
 
-# C extensions
-*.so
+# Packaging files:
+*.egg*
 
-# Distribution / packaging
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
+# Editor temp files:
+*.swp
+*~
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+# Sphinx docs:
+build
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+# SQLite3 database files:
+*.db
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
+# Celerybeat scheduler file:
+celerybeat-schedule
+
+# PyCharm
+.idea
+
+# Public assets
+src/public
+
+# Bower components
+bower_components
+
+# nose coverage
+cover/
 .coverage
-.cache
-nosetests.xml
-coverage.xml
 
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
+# Project specific
+# Bin files
+bin/*
+!bin/.gitkeep
+# Dist files
+dist/*
+!dist/local.json.dist
+!dist/templates
+# Log files
+log/*
+!log/.gitkeep
+# Temp fiels
+tmp/*
+!tmp/.gitkeep
+# Pid files
+var/run/*
+!var/run/.gitkeep

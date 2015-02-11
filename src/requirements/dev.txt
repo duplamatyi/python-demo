@@ -1,0 +1,3 @@
+-r common.txt
+pdb==0.1
+django-debug-toolbar==1.2.2

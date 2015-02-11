@@ -1,0 +1,40 @@
+#!/bin/sh
+#!/bin/bash
+
+DB_NAME={{ database.name }}
+DB_USER={{ database.user }}
+DB_PASSWORD={{ database.password }}
+DB_HOST={{ database.host }}
+DB_PORT={{ database.port }}
+
+VENV_PATH={{ virtualenv.path }}
+
+APPLICATION_PATH={{ application.path }}
+
+DJANGO_SETTINGS_MODULE={{ application.settings_module }}
+
+SECRET_KEY={{ application.secret_key }}
+
+SUPERVISOR_USER=`whoami`
+
+
+echo "Starting $NAME as `whoami`"
+
+cd $APPLICATION_PATH
+
+# Activate the virtual environment
+source $VENV_PATH/bin/activate
+
+# Export env variables
+
+export PYTHONPATH=$APPLICATION_PATH:$APPLICATION_PATH/src:$PYTHONPATH
+
+export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+
+export SECRET_KEY=$SECRET_KEY
+
+export DB_NAME=$DB_NAME
+export DB_USER=$DB_USER
+export DB_PASSWORD=$DB_PASSWORD
+export DB_HOST=$DB_HOST
+export DB_PORT=$DB_PORT

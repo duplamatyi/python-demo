@@ -1,0 +1,27 @@
+{
+  "name": "python-demo",
+  "version": "0.0.0",
+  "authors": [
+    "Matyas Matyas <duplamatyi@gmail.com>"
+  ],
+  "description": "Python Demo",
+  "main": "bower.json",
+  "keywords": [
+    "Python",
+    "Django"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "typeahead.js": "~0.10.5",
+    "underscore": "~1.7.0"
+  }
+}
