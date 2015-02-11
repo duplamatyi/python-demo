@@ -38,6 +38,16 @@ Activate your environment
 source bin/env_start.sh
 ```
 
+Run the migrations:
+```
+python manage.py migrate
+```
+
+Create a superuser for the admin:
+```
+python manage.py createsuperuser
+```
+
 Install the bower components:
 
 ```
